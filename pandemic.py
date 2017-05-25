@@ -131,7 +131,7 @@ def pandemic(nPlayers=4, nEpidemics=5, useVirulent=False, useMutation=False,
     print ' Seed = {}\n'.format(seed) ## and regardless, display it
     npran.seed(seed)
     
-     ## Set up the epidemics we'll be using:
+    ## Set up the epidemics we'll be using:
     if useVirulent:
         myEpidemics = npran.choice(vEpidemicList, nEpidemics, replace=False)
         npran.shuffle(myEpidemics)
@@ -169,7 +169,7 @@ def pandemic(nPlayers=4, nEpidemics=5, useVirulent=False, useMutation=False,
     ## Draw starting hands:
     tmp = raw_input('Hit Enter when ready to draw starting hands and infect the board! ')
     print
-    handSize0 = 9/nPlayers
+    handSize0 = 9/nPlayers ## (uses integer division to make appropriate hand-sizes for 2-4 players)
     for iPlayer in range(nPlayers):
         print "Player {}'s hand:".format(iPlayer+1)
         for iHand in range(handSize0):
