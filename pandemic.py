@@ -15,10 +15,10 @@ nEpidemicList = ['Epidemic!','Epidemic!','Epidemic!','Epidemic!','Epidemic!','Ep
 roleList = ['Medic','Researcher','Operations Expert','Dispatcher','Scientist', 'Contingency Planner','Quarantine Specialist','Archivist','Epidemiologist','Field Operative','Troubleshooter','Generalist','Containment Specialist','First Repsonder','Field Director','Pilot']
 mutationList = ['Mutation: 3 cities','Mutation: 1 city','Mutation: twos go to threes']
 mutationInfectCards = ['Mutation: Infect', 'Mutation: Infect']
-colorLists = {'black':['Algiers','Cairo','Baghdad','Istanbul','Moscow','Tehran','Karachi','Mumbai','Delhi','Kolkata','Riyadh','Chennai'],
+colorLists = {'black':['Algiers', 'Cairo', 'Baghdad', 'Istanbul', 'Moscow', 'Tehran', 'Karachi', 'Mumbai', 'Delhi', 'Kolkata', 'Riyadh', 'Chennai'],
               'blue':['Atlanta', 'San Francisco', 'Chicago', 'Toronto', 'New York', 'Washington', 'London', 'Madrid', 'Paris', 'Essen', 'Milan', 'Saint Petersburg'],
-              'red':['Beijing','Shanghai','Tokyo','Seoul','Osaka','Taipei','Manilla','Sydney','Jacarta','Ho Chi Mihn','Hong Kong','Bankok'],
-              'yellow':['Los Angeles','Mexico City','Lima','Santiago','Miami','Bogota','Sao Paolo','Buenos Aires','Lagos','Kinshasa','Khartoum','Johannesburg']}
+              'red':['Beijing', 'Shanghai', 'Tokyo', 'Seoul', 'Osaka', 'Taipei', 'Manila', 'Sydney', 'Jakarta', 'Ho Chi Minh', 'Hong Kong', 'Bangkok'],
+              'yellow':['Los Angeles', 'Mexico City', 'Lima', 'Santiago', 'Miami', 'Bogota', 'Sao Paolo', 'Buenos Aires', 'Lagos', 'Kinshasa', 'Khartoum', 'Johannesburg']}
 
 
 class deck(list):
