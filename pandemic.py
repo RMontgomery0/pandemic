@@ -18,7 +18,7 @@ mutationInfectCards = ['Mutation: Infect', 'Mutation: Infect']
 colorLists = {'black':['Algiers','Cairo','Baghdad','Istanbul','Moscow','Tehran','Karachi','Mumbai','Delhi','Kolkata','Riyadh','Chennai'],
               'blue':['Atlanta', 'San Francisco', 'Chicago', 'Toronto', 'New York', 'Washington', 'London', 'Madrid', 'Paris', 'Essen', 'Milan', 'Saint Petersburg'],
               'red':['Beijing','Shanghai','Tokyo','Seoul','Osaka','Taipei','Manilla','Sydney','Jacarta','Ho Chi Mihn','Hong Kong','Bankok'],
-              'yellow':['Los Angeles','Mexico City','Lima','Santiago','Miami','Bogota','Sau Paolo','Buenos Aires','Lagos','Kinshasa','Khartoum','Johannesburg']}
+              'yellow':['Los Angeles','Mexico City','Lima','Santiago','Miami','Bogota','Sao Paolo','Buenos Aires','Lagos','Kinshasa','Khartoum','Johannesburg']}
 
 
 class deck(list):
@@ -90,10 +90,10 @@ def eventCheck(playerDeck, infectionDeck):
         resPop_target = raw_input('Which card would you like to ResPop? [default=cancel] ')
         while resPop_target != '':
             if resPop_target in infectionDeck.discardPile:
-                infectionDeck.discardPile = np.delete(infectionDeck.discardPile,np.argwhere(infectionDeck.discardPile == resPop_target))
+                infectionDeck.discardPile = list(np.delete(infectionDeck.discardPile,np.argwhere(infectionDeck.discardPile == resPop_target)))
                 break
             elif resPop_target in infectionDeck.cardList: ## for when the epidemic already shuffled the card out of the discard pile
-                infectionDeck.cardList = np.delete(infectionDeck.cardList, np.argwhere(infectionDeck.cardList == resPop_target))
+                infectionDeck.cardList = list(np.delete(infectionDeck.cardList, np.argwhere(infectionDeck.cardList == resPop_target)))
                 break
             else:
                 resPop_target = raw_input('... sorry, cound not find that card in the discard pile, try again? [default=cancel] ')
@@ -131,7 +131,7 @@ def pandemic(nPlayers=4, nEpidemics=5, useVirulent=False, useMutation=False,
     print ' Seed = {}\n'.format(seed) ## and regardless, display it
     npran.seed(seed)
     
-    ## Set up the epidemics we'll be using:
+     ## Set up the epidemics we'll be using:
     if useVirulent:
         myEpidemics = npran.choice(vEpidemicList, nEpidemics, replace=False)
         npran.shuffle(myEpidemics)
@@ -169,7 +169,7 @@ def pandemic(nPlayers=4, nEpidemics=5, useVirulent=False, useMutation=False,
     ## Draw starting hands:
     tmp = raw_input('Hit Enter when ready to draw starting hands and infect the board! ')
     print
-    handSize0 = 9/nPlayers ## (uses integer division to make appropriate hand-sizes for 2-4 players)
+    handSize0 = 9/nPlayers
     for iPlayer in range(nPlayers):
         print "Player {}'s hand:".format(iPlayer+1)
         for iHand in range(handSize0):
